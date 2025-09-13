@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0f1fcfc9195d7fa31ffdcdb2c4fae38b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0f1fcfc9195d7fa31ffdcdb2c4fae38b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0f1fcfc9195d7fa31ffdcdb2c4fae38b = L.map(
+                "map_0f1fcfc9195d7fa31ffdcdb2c4fae38b",
+                {
+                    center: [51.095, 71.42],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f7efa67979a688205c9d07a1de2e38a1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f7efa67979a688205c9d07a1de2e38a1.addTo(map_0f1fcfc9195d7fa31ffdcdb2c4fae38b);
+        
+    
+            var heat_map_c54656da1a748c4a44e9038328d82a9f = L.heatLayer(
+                [[51.100960000000015, 71.40517189999998, 327.75], [51.09596000000001, 71.42517189999997, 325.71], [51.09096000000001, 71.42517189999997, 259.52], [51.09596000000001, 71.41017189999998, 258.5], [51.080960000000005, 71.42017189999997, 252.36], [51.09596000000001, 71.42017189999997, 230.5], [51.100960000000015, 71.43017189999996, 228.95], [51.09596000000001, 71.41517189999998, 228.6], [51.080960000000005, 71.40017189999999, 228.54], [51.08596000000001, 71.42517189999997, 224.7]],
+                {
+  "minOpacity": 0.2,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_c54656da1a748c4a44e9038328d82a9f.addTo(map_0f1fcfc9195d7fa31ffdcdb2c4fae38b);
+        
+    
+            var feature_group_a79e1e6fce1199fa697d1aa21e796dbc = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_5d8b97f0b8492f974b7a249be76d4a16 = L.circleMarker(
+                [51.09159542077362, 71.41691336917977],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_a79e1e6fce1199fa697d1aa21e796dbc);
+        
+    
+        var popup_627a85908a19f31b8e3ea7ff65f2fd69 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1dd1bd919ef67737cd7ab27f165b048f = $(`<div id="html_1dd1bd919ef67737cd7ab27f165b048f" style="width: 100.0%; height: 100.0%;">Кластер 0.0<br>Размер: 6479.0<br>Плотность: 64.79</div>`)[0];
+                popup_627a85908a19f31b8e3ea7ff65f2fd69.setContent(html_1dd1bd919ef67737cd7ab27f165b048f);
+            
+        
+
+        circle_marker_5d8b97f0b8492f974b7a249be76d4a16.bindPopup(popup_627a85908a19f31b8e3ea7ff65f2fd69)
+        ;
+
+        
+    
+    
+            circle_marker_5d8b97f0b8492f974b7a249be76d4a16.bindTooltip(
+                `<div>
+                     Кластер (размер: 6479.0)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_a79e1e6fce1199fa697d1aa21e796dbc.addTo(map_0f1fcfc9195d7fa31ffdcdb2c4fae38b);
+        
+    
+            var feature_group_55156ba6eba75b3a285895d188e681df = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_b18ba184ccc6ec88d64301ba719e3475 = L.marker(
+                [51.0887817, 71.4174617],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_52b6a2d381b064ea733991b1f6a58c93 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c81f901072bcd9d4fc7a5a069add86f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7f751d8c3196a7d4a21c39205ff3db60 = $(`<div id="html_7f751d8c3196a7d4a21c39205ff3db60" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -6683155579225977143<br>Макс скорость: 34.2</div>`)[0];
+                popup_7c81f901072bcd9d4fc7a5a069add86f.setContent(html_7f751d8c3196a7d4a21c39205ff3db60);
+            
+        
+
+        marker_b18ba184ccc6ec88d64301ba719e3475.bindPopup(popup_7c81f901072bcd9d4fc7a5a069add86f)
+        ;
+
+        
+    
+    
+            marker_b18ba184ccc6ec88d64301ba719e3475.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b18ba184ccc6ec88d64301ba719e3475.setIcon(icon_52b6a2d381b064ea733991b1f6a58c93);
+            
+    
+            var marker_329af02b48f33560bfc9cc8fddfbd4c5 = L.marker(
+                [51.10087, 71.41263],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_bac04983e93a456c11c3778556d96ad1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_350aa3776684c607841449254a709db7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e8ac89d9f952a217935d723a954b0742 = $(`<div id="html_e8ac89d9f952a217935d723a954b0742" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -1497322719701473200<br>Макс скорость: 21.1</div>`)[0];
+                popup_350aa3776684c607841449254a709db7.setContent(html_e8ac89d9f952a217935d723a954b0742);
+            
+        
+
+        marker_329af02b48f33560bfc9cc8fddfbd4c5.bindPopup(popup_350aa3776684c607841449254a709db7)
+        ;
+
+        
+    
+    
+            marker_329af02b48f33560bfc9cc8fddfbd4c5.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_329af02b48f33560bfc9cc8fddfbd4c5.setIcon(icon_bac04983e93a456c11c3778556d96ad1);
+            
+    
+            var marker_0be9e397705e9c7b6aec91add7dbab73 = L.marker(
+                [51.09337, 71.42575],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_5ae7a98b536ced70307d32a876f6aefe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1df6a6ffbf156cfb502251bc92935165 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34b22a182274ab6131a0194826a31f6d = $(`<div id="html_34b22a182274ab6131a0194826a31f6d" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -7711155912476414697<br>Макс скорость: 29.6</div>`)[0];
+                popup_1df6a6ffbf156cfb502251bc92935165.setContent(html_34b22a182274ab6131a0194826a31f6d);
+            
+        
+
+        marker_0be9e397705e9c7b6aec91add7dbab73.bindPopup(popup_1df6a6ffbf156cfb502251bc92935165)
+        ;
+
+        
+    
+    
+            marker_0be9e397705e9c7b6aec91add7dbab73.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0be9e397705e9c7b6aec91add7dbab73.setIcon(icon_5ae7a98b536ced70307d32a876f6aefe);
+            
+    
+            var marker_9460d60ae043bb85cfb25c55959aa094 = L.marker(
+                [51.097692, 71.4307401],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_0f893bc1f058f4a22d0f8dfe8d8f09f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dcb22123d9e1b718a06f891247262d3a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_606578b681b141733ca0321c6663641d = $(`<div id="html_606578b681b141733ca0321c6663641d" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -5351004858046889463<br>Макс скорость: 24.6</div>`)[0];
+                popup_dcb22123d9e1b718a06f891247262d3a.setContent(html_606578b681b141733ca0321c6663641d);
+            
+        
+
+        marker_9460d60ae043bb85cfb25c55959aa094.bindPopup(popup_dcb22123d9e1b718a06f891247262d3a)
+        ;
+
+        
+    
+    
+            marker_9460d60ae043bb85cfb25c55959aa094.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9460d60ae043bb85cfb25c55959aa094.setIcon(icon_0f893bc1f058f4a22d0f8dfe8d8f09f2);
+            
+    
+            var marker_d4aaa3ce70bfa9668399cdad37981e1e = L.marker(
+                [51.08626, 71.42887],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_2b0b95a77868327c9900df66cf7c1c78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b761c1c774c2b07e941de763c5e84ac9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1d7c37095d19d40159b2d47203d8a787 = $(`<div id="html_1d7c37095d19d40159b2d47203d8a787" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -5182303324346386213<br>Макс скорость: 22.7</div>`)[0];
+                popup_b761c1c774c2b07e941de763c5e84ac9.setContent(html_1d7c37095d19d40159b2d47203d8a787);
+            
+        
+
+        marker_d4aaa3ce70bfa9668399cdad37981e1e.bindPopup(popup_b761c1c774c2b07e941de763c5e84ac9)
+        ;
+
+        
+    
+    
+            marker_d4aaa3ce70bfa9668399cdad37981e1e.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4aaa3ce70bfa9668399cdad37981e1e.setIcon(icon_2b0b95a77868327c9900df66cf7c1c78);
+            
+    
+            var marker_dd770351534feaf1b34e1cf3cef9f1d0 = L.marker(
+                [51.0851217, 71.41727],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_b796265ca968ecbc800cf18f74e34e67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65eaa59c2c9bc7e2868cc6950ab85c49 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b6162699fb8b50d2804d72b8c0065be = $(`<div id="html_0b6162699fb8b50d2804d72b8c0065be" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 7330944877497336823<br>Макс скорость: 17.5</div>`)[0];
+                popup_65eaa59c2c9bc7e2868cc6950ab85c49.setContent(html_0b6162699fb8b50d2804d72b8c0065be);
+            
+        
+
+        marker_dd770351534feaf1b34e1cf3cef9f1d0.bindPopup(popup_65eaa59c2c9bc7e2868cc6950ab85c49)
+        ;
+
+        
+    
+    
+            marker_dd770351534feaf1b34e1cf3cef9f1d0.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd770351534feaf1b34e1cf3cef9f1d0.setIcon(icon_b796265ca968ecbc800cf18f74e34e67);
+            
+    
+            var marker_426c32b1c94e17346fd4748b681e97b5 = L.marker(
+                [51.08454, 71.42097],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_0cac22006e504aadc6e86c79fea38d04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04fc8b4d60201001cce279296d325395 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_795ccfb3435cd19bb948d0a29841bf10 = $(`<div id="html_795ccfb3435cd19bb948d0a29841bf10" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -3223570842974303970<br>Макс скорость: 1.6</div>`)[0];
+                popup_04fc8b4d60201001cce279296d325395.setContent(html_795ccfb3435cd19bb948d0a29841bf10);
+            
+        
+
+        marker_426c32b1c94e17346fd4748b681e97b5.bindPopup(popup_04fc8b4d60201001cce279296d325395)
+        ;
+
+        
+    
+    
+            marker_426c32b1c94e17346fd4748b681e97b5.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_426c32b1c94e17346fd4748b681e97b5.setIcon(icon_0cac22006e504aadc6e86c79fea38d04);
+            
+    
+            var marker_ed750adae260c837674b6d13fa143712 = L.marker(
+                [51.0825839, 71.41225712],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_88c14ac73ed75a9c9bd55448384c9f30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd7f23c8aab03822c05794c198d68ba3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c27ffacc05ca84cd156ea76e2597d69d = $(`<div id="html_c27ffacc05ca84cd156ea76e2597d69d" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -7900788012030257306<br>Макс скорость: 16.7</div>`)[0];
+                popup_bd7f23c8aab03822c05794c198d68ba3.setContent(html_c27ffacc05ca84cd156ea76e2597d69d);
+            
+        
+
+        marker_ed750adae260c837674b6d13fa143712.bindPopup(popup_bd7f23c8aab03822c05794c198d68ba3)
+        ;
+
+        
+    
+    
+            marker_ed750adae260c837674b6d13fa143712.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ed750adae260c837674b6d13fa143712.setIcon(icon_88c14ac73ed75a9c9bd55448384c9f30);
+            
+    
+            var marker_0f498d9fe14b37d179cb738e3d58e205 = L.marker(
+                [51.08314, 71.40051],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_85085a047731685054496230f83111b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4dabed16edec406212783c264fe4f946 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3bfffe7a332310df4f38de3b02290b58 = $(`<div id="html_3bfffe7a332310df4f38de3b02290b58" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 8947086965263395599<br>Макс скорость: 29.9</div>`)[0];
+                popup_4dabed16edec406212783c264fe4f946.setContent(html_3bfffe7a332310df4f38de3b02290b58);
+            
+        
+
+        marker_0f498d9fe14b37d179cb738e3d58e205.bindPopup(popup_4dabed16edec406212783c264fe4f946)
+        ;
+
+        
+    
+    
+            marker_0f498d9fe14b37d179cb738e3d58e205.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f498d9fe14b37d179cb738e3d58e205.setIcon(icon_85085a047731685054496230f83111b2);
+            
+    
+            var marker_3bca251916ace96e0511c34193d08408 = L.marker(
+                [51.0924525, 71.4038285],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_8767272790fd5a35feb8e075efa37494 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3181efa5ce46480537949ae818aa7580 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9e4c6fe617642b8dcb1534b66ecb5bd2 = $(`<div id="html_9e4c6fe617642b8dcb1534b66ecb5bd2" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 5902474713428219990<br>Макс скорость: 18.0</div>`)[0];
+                popup_3181efa5ce46480537949ae818aa7580.setContent(html_9e4c6fe617642b8dcb1534b66ecb5bd2);
+            
+        
+
+        marker_3bca251916ace96e0511c34193d08408.bindPopup(popup_3181efa5ce46480537949ae818aa7580)
+        ;
+
+        
+    
+    
+            marker_3bca251916ace96e0511c34193d08408.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3bca251916ace96e0511c34193d08408.setIcon(icon_8767272790fd5a35feb8e075efa37494);
+            
+    
+            var marker_d23f255508ae9fdf516933bddffa407f = L.marker(
+                [51.097192, 71.422194],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_ee87694338fb1689e372d43c3576d838 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8982f92513b5bfbe3001757e9b9b7f1b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9ef08dad287af72c1d8e285be491431e = $(`<div id="html_9ef08dad287af72c1d8e285be491431e" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 2047779033055903079<br>Макс скорость: 18.1</div>`)[0];
+                popup_8982f92513b5bfbe3001757e9b9b7f1b.setContent(html_9ef08dad287af72c1d8e285be491431e);
+            
+        
+
+        marker_d23f255508ae9fdf516933bddffa407f.bindPopup(popup_8982f92513b5bfbe3001757e9b9b7f1b)
+        ;
+
+        
+    
+    
+            marker_d23f255508ae9fdf516933bddffa407f.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d23f255508ae9fdf516933bddffa407f.setIcon(icon_ee87694338fb1689e372d43c3576d838);
+            
+    
+            var marker_c24b50c975970b739c555a9f33768f16 = L.marker(
+                [51.0968029, 71.4111804],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_372c5cf01b2cd5d90b6bd5609e9c0fc7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08401e03d3292689c36c5273008de660 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9a3b5ed683793c44b18a27bc492c332c = $(`<div id="html_9a3b5ed683793c44b18a27bc492c332c" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -7789453642740287330<br>Макс скорость: 17.1</div>`)[0];
+                popup_08401e03d3292689c36c5273008de660.setContent(html_9a3b5ed683793c44b18a27bc492c332c);
+            
+        
+
+        marker_c24b50c975970b739c555a9f33768f16.bindPopup(popup_08401e03d3292689c36c5273008de660)
+        ;
+
+        
+    
+    
+            marker_c24b50c975970b739c555a9f33768f16.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c24b50c975970b739c555a9f33768f16.setIcon(icon_372c5cf01b2cd5d90b6bd5609e9c0fc7);
+            
+    
+            var marker_179de32181254348a555d2d07b25956c = L.marker(
+                [51.08736, 71.42416],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_0808b9ded98cfd3bd6b2d1255d7c1bf0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_498c292b075efda551fb750986f3691b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2512e6327ea20b9962f50e1b37c5b68c = $(`<div id="html_2512e6327ea20b9962f50e1b37c5b68c" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: -3237409122616636937<br>Макс скорость: 23.1</div>`)[0];
+                popup_498c292b075efda551fb750986f3691b.setContent(html_2512e6327ea20b9962f50e1b37c5b68c);
+            
+        
+
+        marker_179de32181254348a555d2d07b25956c.bindPopup(popup_498c292b075efda551fb750986f3691b)
+        ;
+
+        
+    
+    
+            marker_179de32181254348a555d2d07b25956c.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_179de32181254348a555d2d07b25956c.setIcon(icon_0808b9ded98cfd3bd6b2d1255d7c1bf0);
+            
+    
+            var marker_cc46013003c8f23204e495fad1e53e38 = L.marker(
+                [51.0887512, 71.4084783],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_d8b735a95f5f8ff96d53c046e407a695 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2f8331c8a61a7286e0345a2877efe5a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05f82314950f3c078c970e79d839e1aa = $(`<div id="html_05f82314950f3c078c970e79d839e1aa" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 953949036741989871<br>Макс скорость: 18.2</div>`)[0];
+                popup_d2f8331c8a61a7286e0345a2877efe5a.setContent(html_05f82314950f3c078c970e79d839e1aa);
+            
+        
+
+        marker_cc46013003c8f23204e495fad1e53e38.bindPopup(popup_d2f8331c8a61a7286e0345a2877efe5a)
+        ;
+
+        
+    
+    
+            marker_cc46013003c8f23204e495fad1e53e38.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cc46013003c8f23204e495fad1e53e38.setIcon(icon_d8b735a95f5f8ff96d53c046e407a695);
+            
+    
+            var marker_c355b63c430aaf2a9fba9080f3268e92 = L.marker(
+                [51.085467, 71.4024438],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_75c38dfa34bbf3404e1f3f49338b8253 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_771afdcd6f02e4b0c1edfe7e6aa5f4f4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a16bef03d846924ce639e0dbf67571bc = $(`<div id="html_a16bef03d846924ce639e0dbf67571bc" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 1687660012129001291<br>Макс скорость: 19.4</div>`)[0];
+                popup_771afdcd6f02e4b0c1edfe7e6aa5f4f4.setContent(html_a16bef03d846924ce639e0dbf67571bc);
+            
+        
+
+        marker_c355b63c430aaf2a9fba9080f3268e92.bindPopup(popup_771afdcd6f02e4b0c1edfe7e6aa5f4f4)
+        ;
+
+        
+    
+    
+            marker_c355b63c430aaf2a9fba9080f3268e92.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c355b63c430aaf2a9fba9080f3268e92.setIcon(icon_75c38dfa34bbf3404e1f3f49338b8253);
+            
+    
+            var marker_ad0bd93d185e6aed01cbd033664035e6 = L.marker(
+                [51.0759796, 71.4135033],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_4fe66ec88641882466fb6ea3488cbee3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba7405ab1bad40bc02622b8e91cf6bc0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_20838186f611da3214a45c86b3251494 = $(`<div id="html_20838186f611da3214a45c86b3251494" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 6556988216864760761<br>Макс скорость: 10.1</div>`)[0];
+                popup_ba7405ab1bad40bc02622b8e91cf6bc0.setContent(html_20838186f611da3214a45c86b3251494);
+            
+        
+
+        marker_ad0bd93d185e6aed01cbd033664035e6.bindPopup(popup_ba7405ab1bad40bc02622b8e91cf6bc0)
+        ;
+
+        
+    
+    
+            marker_ad0bd93d185e6aed01cbd033664035e6.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad0bd93d185e6aed01cbd033664035e6.setIcon(icon_4fe66ec88641882466fb6ea3488cbee3);
+            
+    
+            var marker_9f91372ee3517b9b3f7cbb449ba196c0 = L.marker(
+                [51.0901876, 71.405909],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_02ce64bbef19be3f2f24367926dc395f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_548ff2b16810d68c742407c577d50de1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99b83d053c21b857588dacac7e59d7d0 = $(`<div id="html_99b83d053c21b857588dacac7e59d7d0" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 8033674256197675647<br>Макс скорость: 21.4</div>`)[0];
+                popup_548ff2b16810d68c742407c577d50de1.setContent(html_99b83d053c21b857588dacac7e59d7d0);
+            
+        
+
+        marker_9f91372ee3517b9b3f7cbb449ba196c0.bindPopup(popup_548ff2b16810d68c742407c577d50de1)
+        ;
+
+        
+    
+    
+            marker_9f91372ee3517b9b3f7cbb449ba196c0.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f91372ee3517b9b3f7cbb449ba196c0.setIcon(icon_02ce64bbef19be3f2f24367926dc395f);
+            
+    
+            var marker_07f6d0d08e150609a9ddae95c100a90a = L.marker(
+                [51.0859683, 71.428095],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_c70cfd60db6c17da9ca0314473f6b4ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60624958c985cb028568178db18efc6a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_917262e5460d8d488276017e24875b70 = $(`<div id="html_917262e5460d8d488276017e24875b70" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 7511312776958872205<br>Макс скорость: 37.2</div>`)[0];
+                popup_60624958c985cb028568178db18efc6a.setContent(html_917262e5460d8d488276017e24875b70);
+            
+        
+
+        marker_07f6d0d08e150609a9ddae95c100a90a.bindPopup(popup_60624958c985cb028568178db18efc6a)
+        ;
+
+        
+    
+    
+            marker_07f6d0d08e150609a9ddae95c100a90a.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07f6d0d08e150609a9ddae95c100a90a.setIcon(icon_c70cfd60db6c17da9ca0314473f6b4ae);
+            
+    
+            var marker_c89464e68fa04c6fb4a665f88d57770e = L.marker(
+                [51.0863132, 71.4162425],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_76dc9b132fb650b83543407fe206ea3a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1c6f1351fe75ef9f06041b71c4e5ce6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89e8161ed32fe88b22589f31d607c856 = $(`<div id="html_89e8161ed32fe88b22589f31d607c856" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 7218383583516942409<br>Макс скорость: 18.8</div>`)[0];
+                popup_e1c6f1351fe75ef9f06041b71c4e5ce6.setContent(html_89e8161ed32fe88b22589f31d607c856);
+            
+        
+
+        marker_c89464e68fa04c6fb4a665f88d57770e.bindPopup(popup_e1c6f1351fe75ef9f06041b71c4e5ce6)
+        ;
+
+        
+    
+    
+            marker_c89464e68fa04c6fb4a665f88d57770e.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c89464e68fa04c6fb4a665f88d57770e.setIcon(icon_76dc9b132fb650b83543407fe206ea3a);
+            
+    
+            var marker_57ec60116cf40f641f052e4d32554ee8 = L.marker(
+                [51.09755, 71.40905],
+                {
+}
+            ).addTo(feature_group_55156ba6eba75b3a285895d188e681df);
+        
+    
+            var icon_0decbb1bff6b62f1d70c1806373c9672 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a060ccbb7113ab7e8e99676ac2f14546 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05cbe9c930ee572ad51a0ff6383507bc = $(`<div id="html_05cbe9c930ee572ad51a0ff6383507bc" style="width: 100.0%; height: 100.0%;">Аномальная поездка<br>ID: 640237044921451556<br>Макс скорость: 0.3</div>`)[0];
+                popup_a060ccbb7113ab7e8e99676ac2f14546.setContent(html_05cbe9c930ee572ad51a0ff6383507bc);
+            
+        
+
+        marker_57ec60116cf40f641f052e4d32554ee8.bindPopup(popup_a060ccbb7113ab7e8e99676ac2f14546)
+        ;
+
+        
+    
+    
+            marker_57ec60116cf40f641f052e4d32554ee8.bindTooltip(
+                `<div>
+                     ⚠️ Аномальная поездка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_57ec60116cf40f641f052e4d32554ee8.setIcon(icon_0decbb1bff6b62f1d70c1806373c9672);
+            
+    
+            feature_group_55156ba6eba75b3a285895d188e681df.addTo(map_0f1fcfc9195d7fa31ffdcdb2c4fae38b);
+        
+    
+            var feature_group_ef5d13e772bed78fb9c12108fca25949 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_f847f25e6052ca7e4bfe6b1e8b8ceb78 = L.circleMarker(
+                [51.100960000000015, 71.40517189999998],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_61540694d6ec080a6c47e758852b9c7d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f7d29500e2f488a6b3f3f6fc258d854 = $(`<div id="html_6f7d29500e2f488a6b3f3f6fc258d854" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #1</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>327.8</b><br>                 Координаты: 51.1010, 71.4052<br>                 Рекомендуется: <b>327 водителей</b>             </div>`)[0];
+                popup_61540694d6ec080a6c47e758852b9c7d.setContent(html_6f7d29500e2f488a6b3f3f6fc258d854);
+            
+        
+
+        circle_marker_f847f25e6052ca7e4bfe6b1e8b8ceb78.bindPopup(popup_61540694d6ec080a6c47e758852b9c7d)
+        ;
+
+        
+    
+    
+            circle_marker_f847f25e6052ca7e4bfe6b1e8b8ceb78.bindTooltip(
+                `<div>
+                     🚗 Позиция #1 (спрос: 327.8)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a205c36f5d7a82bf985b96fa3c5b982 = L.circleMarker(
+                [51.09596000000001, 71.42517189999997],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_b500e292f7fbf428d5d9ea29c72f4373 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_121683a0780272fab5dbbdb9c44f687a = $(`<div id="html_121683a0780272fab5dbbdb9c44f687a" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #2</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>325.7</b><br>                 Координаты: 51.0960, 71.4252<br>                 Рекомендуется: <b>325 водителей</b>             </div>`)[0];
+                popup_b500e292f7fbf428d5d9ea29c72f4373.setContent(html_121683a0780272fab5dbbdb9c44f687a);
+            
+        
+
+        circle_marker_8a205c36f5d7a82bf985b96fa3c5b982.bindPopup(popup_b500e292f7fbf428d5d9ea29c72f4373)
+        ;
+
+        
+    
+    
+            circle_marker_8a205c36f5d7a82bf985b96fa3c5b982.bindTooltip(
+                `<div>
+                     🚗 Позиция #2 (спрос: 325.7)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_520b5a6ae15a719b095dabc2e76dc3bf = L.circleMarker(
+                [51.09096000000001, 71.42517189999997],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_331dcc44004e908eb4a048a048461022 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3567b5b2a2b987fd0b6926fdba56997e = $(`<div id="html_3567b5b2a2b987fd0b6926fdba56997e" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #3</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>259.5</b><br>                 Координаты: 51.0910, 71.4252<br>                 Рекомендуется: <b>259 водителей</b>             </div>`)[0];
+                popup_331dcc44004e908eb4a048a048461022.setContent(html_3567b5b2a2b987fd0b6926fdba56997e);
+            
+        
+
+        circle_marker_520b5a6ae15a719b095dabc2e76dc3bf.bindPopup(popup_331dcc44004e908eb4a048a048461022)
+        ;
+
+        
+    
+    
+            circle_marker_520b5a6ae15a719b095dabc2e76dc3bf.bindTooltip(
+                `<div>
+                     🚗 Позиция #3 (спрос: 259.5)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f6bd286d502877dc9e83a67f8ea4f0a = L.circleMarker(
+                [51.09596000000001, 71.41017189999998],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_708c90dce938f4575d6d84b6d6ddfd0d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0ea1c8d8e902a05665d5dbad374fd39e = $(`<div id="html_0ea1c8d8e902a05665d5dbad374fd39e" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #4</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>258.5</b><br>                 Координаты: 51.0960, 71.4102<br>                 Рекомендуется: <b>258 водителей</b>             </div>`)[0];
+                popup_708c90dce938f4575d6d84b6d6ddfd0d.setContent(html_0ea1c8d8e902a05665d5dbad374fd39e);
+            
+        
+
+        circle_marker_0f6bd286d502877dc9e83a67f8ea4f0a.bindPopup(popup_708c90dce938f4575d6d84b6d6ddfd0d)
+        ;
+
+        
+    
+    
+            circle_marker_0f6bd286d502877dc9e83a67f8ea4f0a.bindTooltip(
+                `<div>
+                     🚗 Позиция #4 (спрос: 258.5)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b767d92a237b0e8f18e18b4c03b64d53 = L.circleMarker(
+                [51.080960000000005, 71.42017189999997],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_0a188f5fab770c64c985d06f51f8037f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b314914faebcd5766994fe3dfbe481e7 = $(`<div id="html_b314914faebcd5766994fe3dfbe481e7" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #5</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>252.4</b><br>                 Координаты: 51.0810, 71.4202<br>                 Рекомендуется: <b>252 водителей</b>             </div>`)[0];
+                popup_0a188f5fab770c64c985d06f51f8037f.setContent(html_b314914faebcd5766994fe3dfbe481e7);
+            
+        
+
+        circle_marker_b767d92a237b0e8f18e18b4c03b64d53.bindPopup(popup_0a188f5fab770c64c985d06f51f8037f)
+        ;
+
+        
+    
+    
+            circle_marker_b767d92a237b0e8f18e18b4c03b64d53.bindTooltip(
+                `<div>
+                     🚗 Позиция #5 (спрос: 252.4)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89af0ee2dd875490dac9d41ceb150f4b = L.circleMarker(
+                [51.09596000000001, 71.42017189999997],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_e62f33e83997265a69b1a985044bb068 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d02bce5675df114a05e95d290bd4dc0 = $(`<div id="html_6d02bce5675df114a05e95d290bd4dc0" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #6</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>230.5</b><br>                 Координаты: 51.0960, 71.4202<br>                 Рекомендуется: <b>230 водителей</b>             </div>`)[0];
+                popup_e62f33e83997265a69b1a985044bb068.setContent(html_6d02bce5675df114a05e95d290bd4dc0);
+            
+        
+
+        circle_marker_89af0ee2dd875490dac9d41ceb150f4b.bindPopup(popup_e62f33e83997265a69b1a985044bb068)
+        ;
+
+        
+    
+    
+            circle_marker_89af0ee2dd875490dac9d41ceb150f4b.bindTooltip(
+                `<div>
+                     🚗 Позиция #6 (спрос: 230.5)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a6e8698bc34bc674a55f7b58aa19ee1 = L.circleMarker(
+                [51.100960000000015, 71.43017189999996],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_c89285a8cba8b4637f5cf497c25e3223 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22d483885d7ff82e97a0dde1b9034ac1 = $(`<div id="html_22d483885d7ff82e97a0dde1b9034ac1" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #7</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>228.9</b><br>                 Координаты: 51.1010, 71.4302<br>                 Рекомендуется: <b>228 водителей</b>             </div>`)[0];
+                popup_c89285a8cba8b4637f5cf497c25e3223.setContent(html_22d483885d7ff82e97a0dde1b9034ac1);
+            
+        
+
+        circle_marker_4a6e8698bc34bc674a55f7b58aa19ee1.bindPopup(popup_c89285a8cba8b4637f5cf497c25e3223)
+        ;
+
+        
+    
+    
+            circle_marker_4a6e8698bc34bc674a55f7b58aa19ee1.bindTooltip(
+                `<div>
+                     🚗 Позиция #7 (спрос: 228.9)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ea8d702a686d3f8a35a53068294c2df = L.circleMarker(
+                [51.09596000000001, 71.41517189999998],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_31aab4d166fb0e2b5c9da5da4cab2466 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bbf45a06112d5af724355abfe91e933a = $(`<div id="html_bbf45a06112d5af724355abfe91e933a" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #8</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>228.6</b><br>                 Координаты: 51.0960, 71.4152<br>                 Рекомендуется: <b>228 водителей</b>             </div>`)[0];
+                popup_31aab4d166fb0e2b5c9da5da4cab2466.setContent(html_bbf45a06112d5af724355abfe91e933a);
+            
+        
+
+        circle_marker_4ea8d702a686d3f8a35a53068294c2df.bindPopup(popup_31aab4d166fb0e2b5c9da5da4cab2466)
+        ;
+
+        
+    
+    
+            circle_marker_4ea8d702a686d3f8a35a53068294c2df.bindTooltip(
+                `<div>
+                     🚗 Позиция #8 (спрос: 228.6)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3e146c842e95695ccec8371256deae9a = L.circleMarker(
+                [51.080960000000005, 71.40017189999999],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_3f71ddb6a5ece6da24d686d9ab7adb5a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_964859b9b3a5fa9bfbbd176e98afabc2 = $(`<div id="html_964859b9b3a5fa9bfbbd176e98afabc2" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #9</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>228.5</b><br>                 Координаты: 51.0810, 71.4002<br>                 Рекомендуется: <b>228 водителей</b>             </div>`)[0];
+                popup_3f71ddb6a5ece6da24d686d9ab7adb5a.setContent(html_964859b9b3a5fa9bfbbd176e98afabc2);
+            
+        
+
+        circle_marker_3e146c842e95695ccec8371256deae9a.bindPopup(popup_3f71ddb6a5ece6da24d686d9ab7adb5a)
+        ;
+
+        
+    
+    
+            circle_marker_3e146c842e95695ccec8371256deae9a.bindTooltip(
+                `<div>
+                     🚗 Позиция #9 (спрос: 228.5)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ceec8d0dab85d1dd9066941e3576e297 = L.circleMarker(
+                [51.08596000000001, 71.42517189999997],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ef5d13e772bed78fb9c12108fca25949);
+        
+    
+        var popup_1f13bb8ca8b71dd17c670055ff34a402 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8a675a1f6580011dd2d2fbab6b565c4b = $(`<div id="html_8a675a1f6580011dd2d2fbab6b565c4b" style="width: 100.0%; height: 100.0%;">                 <b>Рекомендуемая позиция #10</b><br>                 Приоритет: <b>ВЫСОКИЙ</b><br>                 Прогноз спроса: <b>224.7</b><br>                 Координаты: 51.0860, 71.4252<br>                 Рекомендуется: <b>224 водителей</b>             </div>`)[0];
+                popup_1f13bb8ca8b71dd17c670055ff34a402.setContent(html_8a675a1f6580011dd2d2fbab6b565c4b);
+            
+        
+
+        circle_marker_ceec8d0dab85d1dd9066941e3576e297.bindPopup(popup_1f13bb8ca8b71dd17c670055ff34a402)
+        ;
+
+        
+    
+    
+            circle_marker_ceec8d0dab85d1dd9066941e3576e297.bindTooltip(
+                `<div>
+                     🚗 Позиция #10 (спрос: 224.7)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_ef5d13e772bed78fb9c12108fca25949.addTo(map_0f1fcfc9195d7fa31ffdcdb2c4fae38b);
+        
+    
+            var layer_control_d16116b0e890c158305bd59325e100ed_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f7efa67979a688205c9d07a1de2e38a1,
+                },
+                overlays :  {
+                    "\u0422\u0435\u043f\u043b\u043e\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430 \u0441\u043f\u0440\u043e\u0441\u0430" : heat_map_c54656da1a748c4a44e9038328d82a9f,
+                    "\u041a\u043b\u0430\u0441\u0442\u0435\u0440\u044b \u0442\u043e\u0447\u0435\u043a \u043f\u043e\u0441\u0430\u0434\u043a\u0438" : feature_group_a79e1e6fce1199fa697d1aa21e796dbc,
+                    "\u0410\u043d\u043e\u043c\u0430\u043b\u044c\u043d\u044b\u0435 \u043f\u043e\u0435\u0437\u0434\u043a\u0438" : feature_group_55156ba6eba75b3a285895d188e681df,
+                    "\u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u043c\u044b\u0435 \u043f\u043e\u0437\u0438\u0446\u0438\u0438 \u0432\u043e\u0434\u0438\u0442\u0435\u043b\u0435\u0439" : feature_group_ef5d13e772bed78fb9c12108fca25949,
+                },
+            };
+            let layer_control_d16116b0e890c158305bd59325e100ed = L.control.layers(
+                layer_control_d16116b0e890c158305bd59325e100ed_layers.base_layers,
+                layer_control_d16116b0e890c158305bd59325e100ed_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_0f1fcfc9195d7fa31ffdcdb2c4fae38b);
+
+        
+    
+            var tile_layer_748cf779dc174a626983eac55b61c70c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_35c43dff5079e901d0c3ff3db970b07f = new L.Control.MiniMap(
+                tile_layer_748cf779dc174a626983eac55b61c70c,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_0f1fcfc9195d7fa31ffdcdb2c4fae38b.addControl(mini_map_35c43dff5079e901d0c3ff3db970b07f);
+        
+    
+            var measure_control_28ca7c02adafbceb29fdd61090958729 = new L.Control.Measure(
+                {
+  "position": "topright",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "miles",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "acres",
+});
+            map_0f1fcfc9195d7fa31ffdcdb2c4fae38b.addControl(measure_control_28ca7c02adafbceb29fdd61090958729);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_0f1fcfc9195d7fa31ffdcdb2c4fae38b);
+        
+    
+
+            var geocoderOpts_geocoder_05c20f3b7c72a33138a7ac98194645f9 = {
+  "collapsed": false,
+  "position": "topright",
+  "defaultMarkGeocode": true,
+  "zoom": 11,
+  "provider": "nominatim",
+  "providerOptions": {
+},
+};
+
+            // note: geocoder name should start with lowercase
+            var geocoderName_geocoder_05c20f3b7c72a33138a7ac98194645f9 = geocoderOpts_geocoder_05c20f3b7c72a33138a7ac98194645f9["provider"];
+
+            var customGeocoder_geocoder_05c20f3b7c72a33138a7ac98194645f9 = L.Control.Geocoder[ geocoderName_geocoder_05c20f3b7c72a33138a7ac98194645f9 ](
+                geocoderOpts_geocoder_05c20f3b7c72a33138a7ac98194645f9['providerOptions']
+            );
+            geocoderOpts_geocoder_05c20f3b7c72a33138a7ac98194645f9["geocoder"] = customGeocoder_geocoder_05c20f3b7c72a33138a7ac98194645f9;
+
+            L.Control.geocoder(
+                geocoderOpts_geocoder_05c20f3b7c72a33138a7ac98194645f9
+            ).on('markgeocode', function(e) {
+                var zoom = geocoderOpts_geocoder_05c20f3b7c72a33138a7ac98194645f9['zoom'] || map_0f1fcfc9195d7fa31ffdcdb2c4fae38b.getZoom();
+                map_0f1fcfc9195d7fa31ffdcdb2c4fae38b.setView(e.geocode.center, zoom);
+            }).addTo(map_0f1fcfc9195d7fa31ffdcdb2c4fae38b);
+
+        
+</script>
+</html>
