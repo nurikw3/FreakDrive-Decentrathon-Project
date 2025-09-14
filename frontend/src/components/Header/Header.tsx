@@ -33,12 +33,11 @@ const Header: React.FC = () => {
             <a href="#heatmap" className="nav-link">Heat Map</a>
             <a href="#technology" className="nav-link">Technology</a>
             <a href="#stats" className="nav-link">Results</a>
-            <a href="#contact" className="nav-link">Contact</a>
           </nav>
 
           <div className="header-actions">
-            <a href="#demo" className="btn btn-secondary">View Demo</a>
-            <a href="#contact" className="btn btn-primary">Get Started</a>
+            <a href="#heatmap" className="btn btn-secondary">View Demo</a>
+            <a href="#heatmap" className="btn btn-primary">Get Started</a>
           </div>
 
           <button 

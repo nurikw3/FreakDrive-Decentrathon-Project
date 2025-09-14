@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                   <li><a href="#features">Features</a></li>
                   <li><a href="#technology">Technology</a></li>
                   <li><a href="#stats">Results</a></li>
-                  <li><a href="#demo">Live Demo</a></li>
+                  <li><a href="#heatmap">Live Demo</a></li>
                 </ul>
               </div>
 
@@ -41,8 +41,7 @@ const Footer: React.FC = () => {
                 <h4>Project</h4>
                 <ul>
                   <li><a href="https://github.com/maussym/FreakDrive-Decentrathon-Project" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                  <li><a href="#demo">Documentation</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#heatmap">Documentation</a></li>
                   <li><a href="https://indrive.com" target="_blank" rel="noopener noreferrer">inDrive</a></li>
                 </ul>
               </div>
