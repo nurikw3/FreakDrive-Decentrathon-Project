@@ -47,40 +47,6 @@ const Stats: React.FC = () => {
               ))}
             </div>
 
-            <div className="performance-section">
-              <div className="performance-chart">
-                <div className="chart-header">
-                  <h3>Model Performance Comparison</h3>
-                  <p>Accuracy scores across different machine learning algorithms</p>
-                </div>
-                <div className="chart-bars">
-                  <div className="bar-group">
-                    <div className="bar" style={{ height: '70%' }}>
-                      <span className="bar-value">85%</span>
-                    </div>
-                    <span className="bar-label">DBSCAN</span>
-                  </div>
-                  <div className="bar-group">
-                    <div className="bar" style={{ height: '55%' }}>
-                      <span className="bar-value">78%</span>
-                    </div>
-                    <span className="bar-label">K-Means</span>
-                  </div>
-                  <div className="bar-group">
-                    <div className="bar active" style={{ height: '95%' }}>
-                      <span className="bar-value">94%</span>
-                    </div>
-                    <span className="bar-label">Random Forest</span>
-                  </div>
-                  <div className="bar-group">
-                    <div className="bar" style={{ height: '40%' }}>
-                      <span className="bar-value">72%</span>
-                    </div>
-                    <span className="bar-label">Linear Regression</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

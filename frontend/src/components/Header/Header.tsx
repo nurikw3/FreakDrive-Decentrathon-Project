@@ -37,7 +37,6 @@ const Header: React.FC = () => {
 
           <div className="header-actions">
             <a href="#heatmap" className="btn btn-secondary">View Demo</a>
-            <a href="#heatmap" className="btn btn-primary">Get Started</a>
           </div>
 
           <button 
