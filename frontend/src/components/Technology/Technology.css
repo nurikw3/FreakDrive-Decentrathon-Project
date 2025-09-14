@@ -1,0 +1,452 @@
+.technology {
+  position: relative;
+}
+
+.technology-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.tech-stack-simple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 60px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.tech-item-simple {
+  text-align: center;
+  padding: 30px 25px;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid rgba(164, 230, 53, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-item-simple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #A4E635, #8BC34A);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.tech-item-simple:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(164, 230, 53, 0.15);
+  border-color: rgba(164, 230, 53, 0.3);
+}
+
+.tech-item-simple:hover::before {
+  transform: scaleX(1);
+}
+
+.tech-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tech-item-simple .tech-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.tech-item-simple .tech-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.tech-category {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(164, 230, 53, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tech-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(164, 230, 53, 0.2);
+}
+
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #A4E635;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(164, 230, 53, 0.1);
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tech-item {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  background: rgba(255, 107, 53, 0.05);
+  transform: translateX(5px);
+}
+
+.tech-name {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.tech-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.workflow-section {
+  margin-bottom: 80px;
+}
+
+.workflow-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 50px;
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workflow-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding: 25px 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(164, 230, 53, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.workflow-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #A4E635, #8BC34A);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.workflow-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(164, 230, 53, 0.15);
+  border-color: rgba(164, 230, 53, 0.3);
+}
+
+.workflow-item:hover::before {
+  transform: scaleX(1);
+}
+
+.workflow-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #A4E635, #8BC34A);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(164, 230, 53, 0.3);
+}
+
+.step-icon {
+  font-size: 2rem;
+  margin-top: 5px;
+}
+
+.workflow-content {
+  width: 100%;
+}
+
+.workflow-item-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.workflow-description {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.architecture-diagram {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(164, 230, 53, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.architecture-diagram::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #A4E635, #8BC34A);
+}
+
+.diagram-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.diagram-container {
+  display: flex;
+  justify-content: center;
+}
+
+.architecture-flow {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding: 15px 20px;
+  max-width: 100%;
+}
+
+.arch-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 10px;
+  background: rgba(164, 230, 53, 0.05);
+  border-radius: 12px;
+  min-width: 90px;
+  max-width: 120px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(164, 230, 53, 0.1);
+  flex-shrink: 0;
+}
+
+.arch-component:hover {
+  background: rgba(164, 230, 53, 0.1);
+  border-color: rgba(164, 230, 53, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(164, 230, 53, 0.15);
+}
+
+.arch-component:hover .component-icon {
+  transform: scale(1.1);
+}
+
+.data-input:hover .component-icon,
+.processing:hover .component-icon,
+.api:hover .component-icon,
+.visualization:hover .component-icon {
+  color: #8BC34A;
+}
+
+.component-icon {
+  font-size: 1.8rem;
+  margin-bottom: 3px;
+  color: #A4E635;
+  transition: all 0.3s ease;
+}
+
+/* Same inDrive green for all components */
+.data-input .component-icon,
+.processing .component-icon,
+.api .component-icon,
+.visualization .component-icon {
+  color: #A4E635;
+}
+
+.component-label {
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.flow-arrow {
+  font-size: 1.3rem;
+  color: #A4E635;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .tech-stack-simple {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+  .tech-category {
+    padding: 25px;
+  }
+
+  .workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .workflow-item {
+    padding: 20px 15px;
+  }
+
+  .architecture-diagram {
+    padding: 30px 20px;
+  }
+
+  .architecture-flow {
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .flow-arrow {
+    font-size: 1.1rem;
+  }
+
+  .arch-component {
+    min-width: 80px;
+    max-width: 100px;
+    padding: 10px 8px;
+  }
+  
+  .component-icon {
+    font-size: 1.5rem;
+  }
+  
+  .component-label {
+    font-size: 0.75rem;
+  }
+
+@media (max-width: 480px) {
+  .tech-stack-simple {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .tech-item-simple {
+    padding: 20px 15px;
+  }
+  
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+  
+  .workflow-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .architecture-flow {
+    gap: 8px;
+    justify-content: flex-start;
+    padding: 5px 0;
+  }
+  
+  .arch-component {
+    min-width: 70px;
+    max-width: 85px;
+    padding: 8px 6px;
+  }
+  
+  .component-icon {
+    font-size: 1.3rem;
+  }
+  
+  .component-label {
+    font-size: 0.7rem;
+  }
+  
+  .flow-arrow {
+    font-size: 1rem;
+  }
+}

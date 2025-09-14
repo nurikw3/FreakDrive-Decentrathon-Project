@@ -1,0 +1,178 @@
+.footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(164, 230, 53, 0.5), transparent);
+}
+
+.footer-content {
+  padding: 80px 0 40px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-brand h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #A4E635;
+  margin-bottom: 5px;
+}
+
+.brand-subtitle {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.brand-description {
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.link-group h4 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.link-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-group li {
+  margin-bottom: 12px;
+}
+
+.link-group a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.link-group a:hover {
+  color: #A4E635;
+}
+
+.footer-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+  margin: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-stats .stat-item {
+  text-align: center;
+}
+
+.footer-stats .stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #A4E635;
+  margin-bottom: 5px;
+}
+
+.footer-stats .stat-label {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 0;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-tech {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-tech span {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.footer-tech .indrive-logo {
+  height: 24px;
+  width: auto;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 60px 0 30px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-stats {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .footer-stats .stat-item {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-tech {
+    justify-content: center;
+  }
+}
