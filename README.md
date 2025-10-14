@@ -1,4 +1,4 @@
-# FreakDrive - AI-Powered Driver Positioning System
+# FreakDrive - AI-Powered Driver Positioning System (https://freak-drive.vercel.app/)
 
 <div align="center">
   <img src="frontend/public/teamlogo.svg" alt="Freak&Geek Team Logo" width="120" height="80">
