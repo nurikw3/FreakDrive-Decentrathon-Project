@@ -13,6 +13,8 @@
 
 ## 🚀 Project Overview
 
+![Preview](preview.jpg)
+
 FreakDrive is an innovative AI-powered solution that revolutionizes driver positioning in ride-hailing services through advanced geotrack analytics and machine learning algorithms. Built for the inDrive hackathon, our system optimizes driver positioning, predicts demand patterns, and enhances safety for millions of rides.
 
 ### 🎯 Key Achievements
